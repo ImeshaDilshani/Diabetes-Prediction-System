@@ -12,7 +12,7 @@ The Diabetes Prediction System is a web-based application that predicts the like
 ## Getting Started
 Clone the repository
 ```
-git clone https://github.com/your-username/Diabetes-Prediction-System.git
+git clone https://github.com/ImeshaDilshani/Diabetes-Prediction-System.git
 ```
 Run the development server
 ```
