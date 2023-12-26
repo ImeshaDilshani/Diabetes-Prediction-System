@@ -29,38 +29,40 @@
       {% csrf_token %}
         <div>
           <label  class="form-label">Pregnancies</label>
-          <input type="text" class="form-control" >
+          <input type="text" class="form-control" name="Pregnancies">
         </div>
         <div>
           <label class="form-label">Glucose</label>
-          <input type="text" class="form-control" >
+          <input type="text" class="form-control" name="Glucose">
         </div>
         <div>
             <label  class="form-label">Blood Pressure</label>
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control" name="BloodPressure">
           </div>
           <div>
             <label  class="form-label">Skin thickness</label>
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control" name="SkinThickness">
           </div>
           <div>
             <label  class="form-label">Insulin</label>
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control" name="Insulin">
           </div>
           <div>
             <label  class="form-label">BMI</label>
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control" name="BMI">
           </div>
           <div>
             <label  class="form-label">Diabetes Pedigree Function</label>
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control" name="DiabetesPedigreeFunction">
           </div>
           <div>
             <label  class="form-label">Age</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control"name="Age">
           </div>
         <button type="submit" class="btn btn-primary mt-1 mb-1" >Submit</button>
-        <p>Prediction Result: {{ prediction }}</p>
+           {% if result_message %}
+             <p>{{ result_message }}</p>
+         {% endif %}
       </form>
 </body>
 </html>

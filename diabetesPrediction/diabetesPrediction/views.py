@@ -13,7 +13,7 @@ def index(request):
         Glucose = float(request.POST.get('Glucose'))
         BloodPressure = float(request.POST.get('BloodPressure')) 
         SkinThickness = float(request.POST.get('SkinThickness'))
-        insulin = float(request.POST.get('insulin'))
+        Insulin = float(request.POST.get('Insulin'))
         BMI = float(request.POST.get('BMI'))
         DiabetesPedigreeFunction = float(request.POST.get('DiabetesPedigreeFunction'))
         Age = int(request.POST.get('Age'))
@@ -23,13 +23,18 @@ def index(request):
                        Glucose, 
                        BloodPressure, 
                        SkinThickness, 
-                       insulin,
+                       Insulin,
                        BMI, 
                        DiabetesPedigreeFunction, 
                        Age]]  # Include all input features
         prediction = trained_model.predict(input_data)
+        # Display a user-friendly message based on the prediction
+        if prediction[0] == 1:
+            result_message = 'You have Diabetes.'
+        else:
+            result_message = 'You do not have Diabetes.'
 
-        # Pass the prediction to the template
-        return render(request, 'home.html', {'prediction': prediction[0]})
+        # Pass the result message to the template
+        return render(request, 'home.html', {'result_message': result_message})
     
-    return render(request,'home.html', {'prediction': None})
+    return render(request, 'home.html', {'result_message': None})
