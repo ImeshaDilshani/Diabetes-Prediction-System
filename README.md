@@ -4,6 +4,12 @@ The Diabetes Prediction System is a web-based application that predicts the like
 - Input user data such as pregnancies, glucose level, blood pressure, skin thickness, insulin, BMI, diabetes pedigree function, and age.
 - Get predictions on the likelihood of having diabetes.
 - User-friendly interface for easy interaction.
+  
+![image](https://github.com/ImeshaDilshani/Diabetes-Prediction-System/assets/93858302/d711e48a-c360-472e-92ab-74fbaa5839e6)
+
+![image](https://github.com/ImeshaDilshani/Diabetes-Prediction-System/assets/93858302/6c4d4faf-2897-4977-b797-41210b64dc72)
+
+![image](https://github.com/ImeshaDilshani/Diabetes-Prediction-System/assets/93858302/d8ce530d-edcf-4719-8863-48c31885fd02)
 ## Technologies Used
 - Django: Web framework for building the application.
 - Jupiter Notebook: for model training
